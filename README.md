@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Hamodi! 💖✨</title>
+    <title>Happy Birthday Hamodi! 🐱🎮</title>
+    <!-- خط بيكسلي يشبه ماينكرافت -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -12,10 +14,13 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #2b1055, #7597de, #ff758c, #ff7eb3);
-            background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
+            font-family: 'Press Start 2P', 'Segoe UI', cursive, sans-serif;
+            background: #2d132c;
+            background-image: 
+                radial-gradient(#801336 15%, transparent 16%),
+                radial-gradient(#ee4540 15%, transparent 16%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -26,97 +31,92 @@
             position: relative;
         }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* كارد التهنئة الزجاجي الكيوت */
+        /* كارت ماينكرافت الخشبي مع حواف البيكسل */
         .card {
-            background: rgba(255, 255, 255, 0.18);
-            padding: 40px 25px;
-            border-radius: 30px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: #5c3d2e;
+            border: 8px solid #2b1704;
+            outline: 6px solid #8b5a2b;
+            padding: 35px 20px;
+            border-radius: 4px;
+            box-shadow: 0 20px 0 #120a02, inset 0 0 20px rgba(0,0,0,0.6);
             max-width: 90%;
-            width: 360px;
+            width: 380px;
             z-index: 10;
-            animation: float 3s ease-in-out infinite;
+            position: relative;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .icon {
-            font-size: 4.5rem;
+        .cat-pixel {
+            font-size: 3.8rem;
             margin-bottom: 15px;
             display: inline-block;
-            filter: drop-shadow(0 0 12px rgba(255,182,193,0.9));
+            filter: drop-shadow(4px 4px 0px #000);
+            animation: pixelHop 1s infinite alternate steps(2);
+        }
+
+        @keyframes pixelHop {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-12px); }
         }
 
         h1 {
-            font-size: 2.1rem;
-            color: #fff;
-            margin-bottom: 15px;
-            text-shadow: 0 0 15px rgba(255, 105, 180, 0.9);
-            font-weight: 800;
+            font-size: 1.2rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0px #000;
+            line-height: 1.6;
         }
 
         p {
-            font-size: 1.15rem;
-            color: #fce4ec;
-            line-height: 1.7;
-            margin-bottom: 30px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            font-size: 0.75rem;
+            color: #ffffff;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 0px #000;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border: 4px solid #3d2314;
         }
 
-        /* زر تشغيل الأغنية */
+        /* زر بستايل ماينكرافت */
         .music-btn {
-            background: linear-gradient(45deg, #ff758c, #ff7eb3);
-            color: white;
-            border: none;
-            padding: 16px 32px;
-            font-size: 1.1rem;
+            font-family: 'Press Start 2P', cursive, sans-serif;
+            background: #55ff55;
+            color: #000;
+            border: 4px solid #00aa00;
+            border-bottom: 8px solid #006600;
+            padding: 15px 10px;
+            font-size: 0.7rem;
             font-weight: bold;
-            border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 10px 20px rgba(255, 117, 140, 0.5);
-            transition: all 0.3s ease;
-            outline: none;
-        }
-
-        .music-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 25px rgba(255, 117, 140, 0.7);
+            text-shadow: none;
+            transition: all 0.1s;
+            width: 100%;
         }
 
         .music-btn:active {
-            transform: scale(0.95);
+            border-bottom: 4px solid #006600;
+            transform: translateY(4px);
         }
 
-        /* تأثير القلوب والورود العائمة */
-        .heart {
+        /* قطط وقلوب بيكسل متساقطة */
+        .pixel-rain {
             position: fixed;
             top: -10vh;
-            font-size: 1.5rem;
+            font-size: 2rem;
             user-select: none;
             pointer-events: none;
             z-index: 1;
             animation: fall linear forwards;
+            filter: drop-shadow(2px 2px 0px #000);
         }
 
         @keyframes fall {
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform: translateY(0);
                 opacity: 1;
             }
             100% {
-                transform: translateY(105vh) rotate(360deg);
+                transform: translateY(105vh);
                 opacity: 0;
             }
         }
@@ -125,11 +125,11 @@
 <body>
 
     <div class="card">
-        <div class="icon">🎂✨</div>
-        <h1>كل عام وأنت بخير حمودي! 💖</h1>
-        <p>أتمنى لك سنة جديدة مليانة نجاح وسعادة وتحقيق لكل أحلامك يا رب 🌸✨</p>
+        <div class="cat-pixel">🐱🎂🐱</div>
+        <h1>HAPPY BIRTHDAY HAMODI! 🎉</h1>
+        <p>كل عام وأنت بخير حمودي! سنة جديدة مليانة مغامرات ونجاحات يا رب ✨🎮</p>
         
-        <button class="music-btn" onclick="playMusic()">اضغط هنا لتشغيل الأغنية 🎵</button>
+        <button class="music-btn" onclick="playMusic()">▶ PRESS TO PLAY MUSIC 🎵</button>
         
         <audio id="birthdaySong" loop>
             <source src="song.mp3" type="audio/mpeg">
@@ -138,42 +138,45 @@
     </div>
 
     <script>
-        // تشغيل وإيقاف الأغنية
         function playMusic() {
             var audio = document.getElementById("birthdaySong");
             var btn = document.querySelector(".music-btn");
             
             if (audio.paused) {
                 audio.play();
-                btn.innerHTML = "إيقاف الأغنية ⏸️";
-                btn.style.background = "linear-gradient(45deg, #42e695, #3bb2b8)";
+                btn.innerHTML = "⏸ PAUSE MUSIC";
+                btn.style.background = "#ff5555";
+                btn.style.borderColor = "#aa0000";
+                btn.style.borderBottomColor = "#660000";
             } else {
                 audio.pause();
-                btn.innerHTML = "تشغيل الأغنية 🎵";
-                btn.style.background = "linear-gradient(45deg, #ff758c, #ff7eb3)";
+                btn.innerHTML = "▶ PRESS TO PLAY MUSIC 🎵";
+                btn.style.background = "#55ff55";
+                btn.style.borderColor = "#00aa00";
+                btn.style.borderBottomColor = "#006600";
             }
         }
 
-        // كود القلوب والورود المتساقطة والعائمة
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
+        // إطلاق عناصر بيكسلي كيوت (قطط، سمك، قلوب بيكسل)
+        function createPixelItem() {
+            const item = document.createElement('div');
+            item.classList.add('pixel-rain');
             
-            const shapes = ['💖', '🌸', '💕', '✨', '🌷', '💗', '🎈'];
-            heart.innerText = shapes[Math.floor(Math.random() * shapes.length)];
+            // أيقونات قطط وجيمينج بستايل البيكسل
+            const items = ['🐱', '😸', '🐟', '💖', '🧁', '🎮', '🐾', '✨'];
+            item.innerText = items[Math.floor(Math.random() * items.length)];
             
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-            heart.style.fontSize = Math.random() * 1.5 + 1 + "rem";
+            item.style.left = Math.random() * 100 + "vw";
+            item.style.animationDuration = Math.random() * 3 + 3 + "s";
             
-            document.body.appendChild(heart);
+            document.body.appendChild(item);
             
             setTimeout(() => {
-                heart.remove();
-            }, 5000);
+                item.remove();
+            }, 6000);
         }
 
-        setInterval(createHeart, 250);
+        setInterval(createPixelItem, 300);
     </script>
 
 </body>
