@@ -32,7 +32,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* كارد التهنئة الزجاجي الكيوت */
         .card {
             background: rgba(255, 255, 255, 0.15);
             padding: 40px 25px;
@@ -75,7 +74,6 @@
             text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
 
-        /* زر التشغيل */
         .music-btn {
             background: linear-gradient(45deg, #ff758c, #ff7eb3);
             color: white;
@@ -99,7 +97,6 @@
             transform: scale(0.95);
         }
 
-        /* تأثير مطر القلوب والورود */
         .heart {
             position: fixed;
             top: -10vh;
@@ -138,7 +135,6 @@
     </div>
 
     <script>
-        // تشغيل وإيقاف الأغنية
         function playMusic() {
             var audio = document.getElementById("birthdaySong");
             var btn = document.querySelector(".music-btn");
@@ -154,18 +150,16 @@
             }
         }
 
-        // كود تساقط القلوب والورود الورديّة
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
             
-            // أشكال كيوت تتساقط
             const shapes = ['💖', '🌸', '💕', '✨', '🌷', '💗'];
             heart.innerText = shapes[Math.floor(Math.random() * shapes.length)];
             
             heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // سرعة السقوط
-            heart.style.fontSize = Math.random() * 1.5 + 1 + "rem"; // أحجام مختلفة
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            heart.style.fontSize = Math.random() * 1.5 + 1 + "rem";
             
             document.body.appendChild(heart);
             
@@ -174,7 +168,6 @@
             }, 5000);
         }
 
-        // إطلاق القلوب كل 300 ملي ثانية
         setInterval(createHeart, 300);
     </script>
 
