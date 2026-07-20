@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="ar"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Hamodi</title>
+<style>
+body{margin:0;background:#000;color:#fff;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;overflow:hidden}
+.c{max-width:700px;text-align:center}
+h1{color:#ff69b4;font-size:3em;animation:f 2s infinite}
+p{font-size:2em}.heart{position:fixed;color:#ff69b4;animation:fall 8s linear infinite}
+button{padding:15px 25px;border:none;border-radius:30px;background:#ff69b4;color:#fff;font-size:1.1em}
+@keyframes f{50%{transform:scale(1.1)}}@keyframes fall{from{transform:translateY(-10vh)}to{transform:translateY(110vh)}}
+</style>
+<div class="c">
+<h1>🎉 Happy Birthday 🎉</h1>
+<p>🎂 عيد ميلاد سعيد <b>حمودي</b></p>
+<p>🩷 أبو الحنية</p>
+<p>❤️ أحبك هواي ❤️</p>
+<button onclick="alert('كل عام وأنت بألف خير يا حمودي 💖')">🎁 افتح المفاجأة</button>
+</div>
+<script>
+for(let i=0;i<30;i++){let s=document.createElement('div');s.className='heart';s.textContent='💖';s.style.left=Math.random()*100+'vw';s.style.animationDelay=(Math.random()*8)+'s';document.body.appendChild(s);}
+</script></html>
