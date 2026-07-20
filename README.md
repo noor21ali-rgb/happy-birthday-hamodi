@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Hamodi! 💖</title>
+    <title>Happy Birthday Hamodi! 💖✨</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,9 +13,9 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #2b1055, #7597de, #ff758c);
+            background: linear-gradient(135deg, #2b1055, #7597de, #ff758c, #ff7eb3);
             background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            animation: gradientBG 12s ease infinite;
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -32,14 +32,15 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* كارد التهنئة الزجاجي الكيوت */
         .card {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.18);
             padding: 40px 25px;
             border-radius: 30px;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             max-width: 90%;
             width: 360px;
             z-index: 10;
@@ -55,14 +56,14 @@
             font-size: 4.5rem;
             margin-bottom: 15px;
             display: inline-block;
-            filter: drop-shadow(0 0 10px rgba(255,182,193,0.8));
+            filter: drop-shadow(0 0 12px rgba(255,182,193,0.9));
         }
 
         h1 {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             color: #fff;
             margin-bottom: 15px;
-            text-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.9);
             font-weight: 800;
         }
 
@@ -74,6 +75,7 @@
             text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
 
+        /* زر تشغيل الأغنية */
         .music-btn {
             background: linear-gradient(45deg, #ff758c, #ff7eb3);
             color: white;
@@ -83,20 +85,21 @@
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 10px 20px rgba(255, 117, 140, 0.4);
+            box-shadow: 0 10px 20px rgba(255, 117, 140, 0.5);
             transition: all 0.3s ease;
             outline: none;
         }
 
         .music-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 25px rgba(255, 117, 140, 0.6);
+            box-shadow: 0 15px 25px rgba(255, 117, 140, 0.7);
         }
 
         .music-btn:active {
             transform: scale(0.95);
         }
 
+        /* تأثير القلوب والورود العائمة */
         .heart {
             position: fixed;
             top: -10vh;
@@ -135,6 +138,7 @@
     </div>
 
     <script>
+        // تشغيل وإيقاف الأغنية
         function playMusic() {
             var audio = document.getElementById("birthdaySong");
             var btn = document.querySelector(".music-btn");
@@ -150,11 +154,12 @@
             }
         }
 
+        // كود القلوب والورود المتساقطة والعائمة
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
             
-            const shapes = ['💖', '🌸', '💕', '✨', '🌷', '💗'];
+            const shapes = ['💖', '🌸', '💕', '✨', '🌷', '💗', '🎈'];
             heart.innerText = shapes[Math.floor(Math.random() * shapes.length)];
             
             heart.style.left = Math.random() * 100 + "vw";
@@ -168,7 +173,7 @@
             }, 5000);
         }
 
-        setInterval(createHeart, 300);
+        setInterval(createHeart, 250);
     </script>
 
 </body>
