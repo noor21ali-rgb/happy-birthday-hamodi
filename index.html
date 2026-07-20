@@ -1,20 +1,91 @@
-<!DOCTYPE html><html lang="ar"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Happy Birthday Hamodi</title>
-<style>
-body{margin:0;background:#000;color:#fff;font-family:Arial;display:flex;align-items:center;justify-content:center;height:100vh;overflow:hidden}
-.c{max-width:700px;text-align:center}
-h1{color:#ff69b4;font-size:3em;animation:f 2s infinite}
-p{font-size:2em}.heart{position:fixed;color:#ff69b4;animation:fall 8s linear infinite}
-button{padding:15px 25px;border:none;border-radius:30px;background:#ff69b4;color:#fff;font-size:1.1em}
-@keyframes f{50%{transform:scale(1.1)}}@keyframes fall{from{transform:translateY(-10vh)}to{transform:translateY(110vh)}}
-</style>
-<div class="c">
-<h1>🎉 Happy Birthday 🎉</h1>
-<p>🎂 عيد ميلاد سعيد <b>حمودي</b></p>
-<p>🩷 أبو الحنية</p>
-<p>❤️ أحبك هواي ❤️</p>
-<button onclick="alert('كل عام وأنت بألف خير يا حمودي 💖')">🎁 افتح المفاجأة</button>
-</div>
-<script>
-for(let i=0;i<30;i++){let s=document.createElement('div');s.className='heart';s.textContent='💖';s.style.left=Math.random()*100+'vw';s.style.animationDelay=(Math.random()*8)+'s';document.body.appendChild(s);}
-</script></html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Hamodi! 🎂✨</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 25px;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    .btn {
+      background: #ffffff;
+      color: #e73c7e;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>كل عام وأنت بآلف خير يا حمودي! 🎉🎂</h1>
+    <p>أتمنى لك سنة جديدة مليانة نجاح وسعادة وراحة بال وتحقيق كل أمنياتك يا رب! ✨🎈</p>
+    
+    <button class="btn" onclick="playMusic()">تشغيل الموسيقى 🎵</button>
+  </div>
+
+  <audio id="bgMusic" src="song.mp3" loop></audio>
+
+  <script>
+    function playMusic() {
+      var audio = document.getElementById('bgMusic');
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
